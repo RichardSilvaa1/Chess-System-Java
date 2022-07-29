@@ -12,7 +12,7 @@ public class Board {
 
     public Board(int rows, int columns) {
         if (rows < 1 || columns < 1) {
-            throw new BoardException("Erro criando tabuleiro, é necessaário ao menos 1 linha e coluna");
+            throw new BoardException("Erro criando tabuleiro, e necessaário ao menos 1 linha e coluna");
         }
         this.rows = rows;
         this.columns = columns;
@@ -44,7 +44,7 @@ public class Board {
 
     public void placePiece(Piece piece, Position position) {
         if (thereIsAPiece(position)) {
-            throw new BoardException("já existe uma peça na posição" + position);
+            throw new BoardException("ja existe uma peca na posição" + position);
         }
         pieces[position.getRow()][position.getColumn()] = piece;
         piece.position = position;
